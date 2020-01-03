@@ -1,0 +1,10 @@
+{
+    "hosting": {
+        "public": "dist/TwitchPreview",
+        "ignore": [
+            "firebase.json",
+            "**/.*",
+            "**/node_modules/**"
+        ]
+    }
+}

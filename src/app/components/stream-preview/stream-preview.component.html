@@ -1,0 +1,25 @@
+<mat-card class="straem_preview_card" *ngIf="translationPreview">
+    <div class="stream-preview-img">
+        <img (click)='goToStream( translationPreview.platform, translationPreview.user.login, translationPreview.game.id)'
+            src="{{translationPreview.previewImg}}">
+    </div>
+    <mat-card-content #cardTitle class="stream_preview_card_content">
+        <div class='pointer underline-text' (click)='goToStream(translationPreview.platform, translationPreview.user.login, translationPreview.game.id)'
+            title="{{translationPreview.title.length > width ? translationPreview.title : ''}}">
+            {{translationPreview.title | cuttext: width}}
+        </div>
+    </mat-card-content>
+    <mat-card-content>
+        <div style='display: flex; justify-content: space-between;'>
+            <div class="streamer_data">
+                <img class="stream_preview_avatar" mat-card-avatar src="{{translationPreview.user.profileImageUrl}}">
+                <span style="font-weight: bold;">{{translationPreview.user.name}}</span>
+            </div>
+
+            <div class='viewer_count'>
+                <i class="material-icons-outlined md-dark md-18 ">remove_red_eye</i>
+                <span style="margin-left: 5px;"> {{translationPreview.viewerCount}} </span>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

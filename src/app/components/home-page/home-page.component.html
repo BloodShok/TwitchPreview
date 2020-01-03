@@ -1,0 +1,44 @@
+<mat-grid-list [cols]='cols' [rowHeight]='rowHeight' (window:resize)="onResize($event)">
+    <mat-grid-tile>
+        <div *ngIf='isHidden'>
+            <mat-spinner></mat-spinner>
+        </div>
+        <div class="home-grid-elem" [hidden]='isHidden'>
+            <iframe (load)='isHidden = false' class="home-stream" src="https://mixer.com/embed/player/ChilledCat" frameborder="" scrolling="no"
+                uk-responsive allowfullscreen="true">
+            </iframe>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <div *ngIf='isHidden'>
+            <mat-spinner></mat-spinner>
+        </div>
+        <div class="home-grid-elem" [hidden]='isHidden'>
+            <iframe class="home-stream" src="https://mixer.com/embed/player/VintageRoom" frameborder="" scrolling="no"
+                uk-responsive allowfullscreen="true">
+            </iframe>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <div *ngIf='isHidden'>
+            <mat-spinner></mat-spinner>
+        </div>
+        <div class="home-grid-elem" [hidden]='isHidden'>
+            <iframe class="home-stream" src="https://player.twitch.tv/?channel=beachgroovesradio" frameborder=""
+                scrolling="no" uk-responsive allowfullscreen="true">
+            </iframe>
+        </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+        <div *ngIf='isHidden'>
+            <mat-spinner></mat-spinner>
+        </div>
+        <div class="home-grid-elem" [hidden]='isHidden'>
+            <iframe class="home-stream" src="https://player.twitch.tv/?channel=monstercat" frameborder="" scrolling="no"
+                uk-responsive allowfullscreen="true">
+            </iframe>
+        </div>
+
+    </mat-grid-tile>
+</mat-grid-list>

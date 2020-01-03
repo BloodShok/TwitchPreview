@@ -1,0 +1,41 @@
+.straem_preview_card {
+    max-width: 300px;
+}
+
+.stream_preview_card_content {
+    margin-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    height: 50px;
+}
+
+.material-icons-outlined.md-dark {
+    color: rgb(74, 200, 250);
+}
+
+.material-icons-outlined.md-18 { font-size: 18px; }
+
+.viewer_count {
+    display: flex;
+    align-items: center;
+}
+
+.streamer_data {
+    display: flex;
+    align-items: center;
+}
+.stream_preview_avatar {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.stream-preview-img :hover {
+    border: 2px solid rgb(255, 255, 255);
+}
+.stream-preview-img {
+    border: hidden;
+}
+.stream-preview-title-link {
+    color: black;
+}

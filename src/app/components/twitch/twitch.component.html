@@ -1,0 +1,20 @@
+<div class='main-spinner' *ngIf='!isLoaded'>
+    <mat-spinner></mat-spinner>
+</div>
+
+<div *ngIf='isLoaded'>
+    <div *ngFor='let stream of gameStreams'>
+        <div style='display: flex; justify-content: space-between;'>
+            <span style='font-size: 2rem;'>{{stream.game.name}}</span>
+
+        </div>
+        <hr>
+        <div>
+            <mat-grid-list [cols]='rowCount' [rowHeight]="rowHeight" (window:resize)="onResize($event)">
+                <mat-grid-tile [colspan]="1" *ngFor='let translation of stream.streams'>
+                    <app-stream-preview [translationPreview]="translation"></app-stream-preview>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </div>
+    </div>
+</div>

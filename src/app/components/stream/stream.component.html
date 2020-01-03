@@ -1,0 +1,16 @@
+<div (window:resize) = 'onResize()'>
+    <div style='display: flex; justify-content: center;'>
+        <div>
+            <iframe [src]="channel" height="680" width="1200" frameborder="" scrolling="no" uk-responsive
+                allowfullscreen="true">
+            </iframe>
+
+            <div style='display: flex; margin-top: 10px; align-items: center;' *ngIf='game'>
+                <img [class.mixer-style]='isMixer' src={{game.gamePrviewImg}}>
+                <span style='margin-left: 20px;' [style.font-size.px]="width" >{{game.name}}</span>
+            </div>
+            <hr>
+        </div>
+    </div>
+
+</div>
